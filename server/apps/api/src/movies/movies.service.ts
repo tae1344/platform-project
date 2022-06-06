@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Movie } from './entities/movie.entity';
+import { CreateMovieDto } from './dto/create-movie.dto';
 
 @Injectable()
 export class MoviesService {
@@ -9,19 +10,25 @@ export class MoviesService {
     return this.movies;
   }
 
-  getOne(id: string): Movie {
-    return this.movies.find((movie) => movie.id === +id); // + ===> number형으로 바꿔준다!
+  getOne(id: number): Movie {
+    return this.movies.find((movie) => movie.id === id);
   }
 
-  deleteOne(id: string) {
-    this.movies.filter((movie) => movie.id !== +id);
+  deleteOne(id: number) {
+    this.movies.filter((movie) => movie.id !== id);
     return true;
   }
 
-  create(movieData) {
+  create(movieData: CreateMovieDto) {
     this.movies.push({
       id: this.movies.length + 1,
       ...movieData,
     });
+  }
+
+  update(id: number, updateData) {
+    const movie = this.getOne(id);
+    this.deleteOne(id);
+    this.movies.push({ ...movie, ...updateData });
   }
 }
