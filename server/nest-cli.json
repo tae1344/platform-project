@@ -34,6 +34,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/entity/tsconfig.lib.json"
       }
+    },
+    "board": {
+      "type": "application",
+      "root": "apps/board",
+      "entryFile": "main",
+      "sourceRoot": "apps/board/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/board/tsconfig.app.json"
+      }
     }
   }
 }
