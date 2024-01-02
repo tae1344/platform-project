@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/taeyeon/Documents/platform-project/client/src/app/(dashboard)/layout\":[\"static/media/36afab82570d46f2-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
