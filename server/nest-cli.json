@@ -1,11 +1,11 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/server/src",
+  "sourceRoot": "apps/api/src",
   "monorepo": true,
-  "root": "apps/server",
+  "root": "apps/api",
   "compilerOptions": {
     "webpack": true,
-    "tsConfigPath": "apps/server/tsconfig.app.json"
+    "tsConfigPath": "apps/api/tsconfig.ap.json"
   },
   "projects": {
     "api": {
@@ -42,6 +42,15 @@
       "sourceRoot": "apps/board/src",
       "compilerOptions": {
         "tsConfigPath": "apps/board/tsconfig.app.json"
+      }
+    },
+    "social-media-scheduler": {
+      "type": "application",
+      "root": "apps/social-media-scheduler",
+      "entryFile": "main",
+      "sourceRoot": "apps/social-media-scheduler/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/social-media-scheduler/tsconfig.app.json"
       }
     }
   }

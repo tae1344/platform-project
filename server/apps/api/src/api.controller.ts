@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiService } from './api.service';
-import {EntityService} from "@app/entity";
+import { EntityService } from '@app/entity';
 
 @Controller()
 export class ApiController {
