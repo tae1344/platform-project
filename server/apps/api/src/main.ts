@@ -12,6 +12,7 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
       transform: true, // 타입을 받아서 넘겨줄 때 자동으로 타입 변환 시켜줌
     }),
-  await app.listen(5000);
+    await app.listen(5000),
+  );
 }
 bootstrap();
